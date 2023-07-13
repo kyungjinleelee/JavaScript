@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 논리 연산자 => 실행결과는 논리값
+
+        // 가. && 논리식 => 모두 true 인 경우에만 true
+        console.log( true && true ); //true
+        console.log( true && false ); //false
+    
+        
+        // 다. ! ==> 부정
+        console.log(!false); // true
+        console.log(!true);  // false
+
+
+        /* true/false 같은 논리값이 아닌 
+        일반 데이터도 논리값으로 처리한다. */
+
+        //JS가 false로 처리하는 5개의 데이터
+        console.log(!0); //true
+        console.log(!""); //true
+        console.log(!null); //true
+        console.log(!undefined); //true
+        console.log(!NaN); //true
+        
+        console.log(!10); //false
+        console.log(!"hello"); //false
+
+
+        
+        
+       
+    </script>
+</head>
+<body>
+    <p>안녕하세요</p>
+</body>
+</html>

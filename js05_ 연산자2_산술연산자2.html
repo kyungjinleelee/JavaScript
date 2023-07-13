@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        
+        //연산자2 - 산술 연산자
+        // 문자열 vs 수치 ==> + 를 제외한 나머지는 연산이 됨.
+        var n = "10";      //10이 문자열임에도 불구하고 연산이 된다!
+        var n2 = 3;
+        console.log(n-n2); // 7
+        console.log(n*n2); // 30
+        console.log(n/n2); // 3.33333335
+        console.log(n%n2); // 1
+        
+        console.log(n+n2); // 103 ==> 13이 아니고 103이 나옴.
+        //즉 더하기는 문자열일 경우 '연결'이 됨
+
+        var x = "Hell0" + "world"; // helloworld
+        var x2 = "Hell0" + 10 + 20; //hello1020
+        var x3 = 10 + 20 + "hello"; //30hello
+        var x4 = 10 + "hello" + 30; //10hello30
+        var x4 = "hello" + (10 + 30); //hello40 연산자 우선순위에 의해!
+        console.log(x);
+        console.log(x2);
+        console.log(x3);
+        console.log(x4);
+
+        // "10" --> 10
+        console.log("10"+3); //103
+        console.log( Number.parseInt("10")+3); //13
+
+        // 바로 위의 값을 이렇게도 지정할 수 있음!
+        var num = Number.parseInt("10");
+        console.log(num+3); //13
+        
+        var num = Number.parseInt("A"); // NaN (:not a number. 숫자로 변경할 값이 아니라는 뜻)
+
+    </script>
+</head>
+<body>
+    <p>안녕하세요</p>
+</body>
+</html>
