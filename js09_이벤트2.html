@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+// ok 버튼 누르면 함수 호출되는 이벤트 만들기
+
+
+/* 
+
+ button, checkbox: click 이벤트타입     ==> onclick
+ form태그의 submit: submit 이벤트타입    ==> onsubmit (온서브밋만 폼태그에 붙여야함)
+ input : keyup 이벤트타입               ==> onkeyup
+ select : change 이벤트타입             ==> onchange
+ img : mouseover, mouseout 이벤트타입   ==> onmouseover, onmouseout
+
+*/
+    function fun(){
+        console.log("fun");  // 이벤트 함수 
+        console.dir(event); 
+
+        event.preventDefault(); // 서브밋 방지
+        alert("fun");
+    }
+       function xxx(){
+           console.log("xxx");
+        }
+        function yyy(){
+            console.log("yyy");   // 밑에 div가 겹쳐있어서 이벤트가 전파됨! 이걸 방지하기 위해 
+            event.stopPropagation(); // yyy까지만 이벤트 되는걸로 방지 완료
+        }
+
+     
+       
+    </script>
+</head>
+<body>
+    <h2>자동 서브밋 방지</h2>
+    <form action="target.html" method="get" onsubmit="fun()">
+        나이: <input type="text" name="age"><br>
+
+        <input type="submit" value="전송">
+    </form>
+    <h2>이벤트 전파 방지</h2>
+    <div style="background: yellow;" onclick="xxx()">
+        xxx
+        <div style="background-color: blue;" onclick="yyy()">
+         yyy
+        </div>
+     </div>
+
+    
+    
+</body>
+</html>

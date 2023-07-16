@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+       
+       // 함수 (function)
+       
+    // 1. 함수 선언식 (이름있는)
+        
+       // 가. 파라미터 없고 리턴값 없음.
+        function fun(){
+            console.log("fun");
+        }
+        fun(); // <- 함수 호출 해야 실행됨 (실행값 : fun)
+
+
+        //나. 파라미터 있고 리턴값 없음.
+        function fun2(n, n2){
+            console.log("fun2", n, n2);
+        }
+        fun2(10,20); // fun2, 10, 20
+        fun2(); // fun2 undefined undefined
+        fun2("a",'b'); // fun2 a b
+        
+    
+        // 다. 파라미터 없고 리턴값 있음.
+        function fun3(){
+            console.log("fun3");
+            return 100; // 리턴값은 반드시 하나만 사용 가능. 만약 여러 값을 리턴하고 싶다면 배열 등에 저장 후 리턴.
+        }
+        var result = fun3(); // fun3 // 리턴 값(100)을 저장하기 위한 용도로 'result' 변수가 필요.
+        console.log(result); // 100
+
+
+        // 라. 파라미터 있고 리턴값 있음. (많이 씀)
+        function fun4(n, n2){
+            console.log("fun4", n, n2);
+            return n+n2;
+        }
+        var result = fun4(10, 20);
+        console.log(result);                // 30 
+
+
+
+    </script>
+</head>
+<body>
+    <p>안녕하세요</p>
+</body>
+</html>

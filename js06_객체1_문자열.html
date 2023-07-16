@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+       // String 객체 ==> 문자열 생성 
+      var s = "hello"; // 권장한다.
+      console.log(s.length);        // 5
+
+     /* var s = new String("hello");
+      console.log(s.length); */             // 5
+
+      // 자주 쓰는 메서드
+      var c = s.charAt(2);
+      console.log("1. 특정문자얻기:", s.charAt(0), s.charAt(1)); // h e
+      console.log(c); // l
+      console.log("2. 문자열 연결:", s.concat("!!")); // hello!!
+      console.log("2. 문자열 연결:", s.concat("!!", "$$", "@@")); // hello!!$$@@
+      
+      console.log("3. 특정문자의 위치조회:", s.indexOf('o')); // 4 (indexof(searching, position?), ?는 없거나 1개)
+      console.log("3. 특정문자의 위치조회:", s.indexOf('o',2)); // 4 (indexof(searching, position?), ?는 없거나 1개)
+      
+      console.log("4. 부분열:", s.substring(0,4)); // hell (0 ~ 3까지 반환) 
+      console.log("4. 부분열:", s.substr(0,3)); // hel (0에서 시작해서 3개의 문자열 반환)
+
+    var s = "HeLLO WoRLD"
+    console.log("5. 대문자로:",s.toUpperCase()); // HELLO WORLD
+    console.log("6. 소문자로:",s.toLowerCase()); // hello world
+    
+    console.log("7. 지정된 문자열로 시작하냐?:",s.startsWith("He"), s.startsWith("x")); // true false
+    console.log("7. 지정된 문자열로 끝나냐?:",s.endsWith("D"), s.endsWith("x")); // true false
+    
+    console.log("8. 문자열 변경:",s.replace("L","X")); // 첫번째 L이 X로 변경 (HeXLO WoRLD)
+    console.log("8. 문자열 변경:",s.replaceAll("L","X")); // 모든 L이 X로 변경 (HeXXO WoRXD)
+    
+    var s = "    hello     ";
+    console.log("9. 총길이:",s.length); //14
+    console.log("9. 공백제거:",s.trim()); //hello
+    console.log("9. 공백제거 후 길이:",s.trim().length); // 5 (called '메서드 체인')
+
+    var s = "홍길동/이순신/유관순";
+    var arr = s.split("/");
+    console.log("10. 구분자로 분리:", arr.toString()); // '홍길동', '이순신', '유관순 (<- 배열로 반환)
+    
+    var arr = s.split("/",2);
+    console.log("10. 구분자로 분리:", arr); // ['홍길동', '이순신']
+    
+    console.log("11. 문자열 포함 여부:", s.includes("이순신")); // true (이순신 있으니까)
+    console.log("11. 문자열 포함 여부:", s.includes("강감찬")); // false (강감찬 없으니까)
+    
+    
+    console.log("12. 반복:", s.repeat(2)); // 홍길동/이순신/유관순홍길동/이순신/유관순
+    
+    // 원본 출력 ==> 문자열은 변경안됨. 메서드를 사용해서 가공하면, 가공된 새로운 문자열이 생성. 원본이 변경되는 게 아님.
+    console.log("원본:", s); // 홍길동/이순신/유관순
+
+    </script>
+</head>
+<body>
+    <p>안녕하세요</p>
+</body>
+</html>
